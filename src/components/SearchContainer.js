@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import SearchBar from './ui/SearchBar.js';
 import ResultsList from './ui/ResultsList';
 
-function SearchContainer({ searchResults, dispatch }) {
+function SearchContainer({ searchResults}) {
 	return (
 		<div>
 			<SearchBar />
