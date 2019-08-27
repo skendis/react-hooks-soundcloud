@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { fetchSearchResults } from '../../store/actions/searchActions.js';
 
-const handleSubmit = (ev) => {};
-
 function SearchBar({ dispatch }) {
 	const [ searchText, setSearchText ] = useState('');
 	const handleSubmit = () => {
