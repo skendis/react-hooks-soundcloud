@@ -1,8 +1,21 @@
+// Base
+@import './variables.scss';
+@import './functions.scss';
+@import './helpers.scss';
+
+// Componetns
+@import './componets/search-bar.scss';
+@import './componets/result-preview.scss';
+@import './componets/image-container.scss';
+
 .App{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: em(20px);
+    padding: em(100px);
 }
 .App>div{
-    border:1px solid blue;
+    background-color: $clr1;
+    min-height: em(600px);
+    padding: em(10px);
 }

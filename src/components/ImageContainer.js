@@ -3,7 +3,7 @@ import Player from './ui/Player.js'
 import { connect } from 'react-redux';
 function ImageContainer({ selectedResult }) {
 	return (
-		<div>
+		<div className="image-container flex justify-center align-center column">
 			<img src={selectedResult.artwork} alt=""/>
 			<Player result={selectedResult}/>
 		</div>

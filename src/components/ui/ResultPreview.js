@@ -7,7 +7,7 @@ function ResultPreview({ result, isTileView, dispatch }) {
 	};
 
 	return (
-		<li>
+		<li className="result-preview flex space-between">
 			<p onClick={setResult}>{result.title}</p>
 			{isTileView ? <img src={result.artwork_url} alt="" /> : ''}
 		</li>

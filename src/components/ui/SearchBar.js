@@ -11,9 +11,9 @@ function SearchBar({ dispatch }) {
 		setSearchText(event.target.value);
 	};
 	return (
-		<div>
-			<input type="text" name="" id="" value={searchText} onChange={handleChange} />
-			<button onClick={handleSubmit}>GO</button>
+		<div className="search-bar">
+			<input type="text" className="search-input" placeholder="search" value={searchText} onChange={handleChange} />
+			<button className="primary-btn" onClick={handleSubmit}>GO</button>
 		</div>
 	);
 }
