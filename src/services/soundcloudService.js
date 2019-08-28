@@ -1,7 +1,7 @@
 import axios from 'axios';
 const CLIENT_ID = 'ggX0UomnLs0VmW7qZnCzw';
 const ENDPOINT = 'https://api.soundcloud.com';
-const LIMIT = 7;
+const LIMIT = 6;
 export default {
 	getSearchResults
 };

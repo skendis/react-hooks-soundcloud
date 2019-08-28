@@ -17,8 +17,8 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 
-// window.addEventListener('beforeinstallprompt', (e) => {
-// 	console.log('beforeinstallprompt event has fired');
-// 	e.prompt();
-// });
-serviceWorker.unregister();
+window.addEventListener('beforeinstallprompt', (e) => {
+	console.log('beforeinstallprompt event has fired');
+	e.prompt();
+});
+serviceWorker.register();
