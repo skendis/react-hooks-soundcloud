@@ -1,14 +1,122 @@
 
-.primary-btn{
-    outline: none;
-    border:1px solid black;
-    border-radius: em(5px);
-    padding: em(10px);
-    font-size: em(16px);
-}
 .search-input{
     padding: em(10px);
     border-radius: em(5px);
     font-size: em(16px);
     margin-right: em(5px);
+    outline: none;
+    background: rgba(0,0,0,0.0);
+    border:1px solid white;
+    color:white;
 }
+.search-input::placeholder{
+    color:white;
+}
+.search-bar{
+    margin-bottom: em(10px);
+}
+
+
+
+
+:root {
+    --size: 4vw;
+    --transition: all 500ms ease-in-out 0s;
+  }
+
+  .primary-btn {
+    position: relative;
+    width: var(--size);
+    height: calc(var(--size) / 2);
+    font-size: calc(var(--size) / 5);
+    font-weight:bold;
+    // top: 50%;
+    left: em(60px);
+    margin-top: calc(var(--size) / -2);
+    margin-left: calc(var(--size) / -2);
+    background-color: #D36BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: calc(var(--size) / 20);
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    animation: shakeMe  1000ms infinite;
+    padding: 0;
+    transition: var(--transition);
+  }
+  .primary-btn:hover {
+    background-color: #8927B3;
+    width: calc(var(--size) * 1.5);
+    padding-left: calc(var(--size) / 4);
+    animation: none;
+    color:#D8FF6A;
+    transition: var(--transition);
+  }
+  .primary-btn::before,
+  .primary-btn::after {
+    content: "";
+    position: absolute;
+    width: 14%;
+    height: 40%;
+    left: -50%;
+    top: 32%;
+    border-radius: 50%;
+    background-color: #D8FF6A;
+    transition: var(--transition);
+    animation: none;
+  }
+  .primary-btn:hover::before,
+  .primary-btn:hover::after {
+    left: 10%;
+    transition: var(--transition);
+  }
+  .primary-btn:hover::before {
+    border: 1px solid #ffffff;
+    top: 31%;
+    left: 9.6%;
+    background-color: rgba(0, 0, 0, 0);
+    animation: radioWaves 1000ms ease-out infinite;
+  }
+  @keyframes shakeMe {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    65% {
+      transform: rotate(-2deg);
+    }
+    80% {
+      transform: rotate(4deg);
+    }
+    92% {
+      transform: rotate(-2deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  @keyframes radioWaves {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(5);
+      opacity: 0;
+    }
+  }
+  
+  .primary-btn:focus {
+    outline: none;
+  }
+  .primary-btn::-moz-focus-inner {
+    border: 0;
+  }
+  

@@ -2,4 +2,12 @@
     cursor: pointer;
     font-size: em(19px);
     margin-bottom: em(8px);
+    border:1px solid white;
+    border-radius: em(5px);
+    transition: ease-in-out .3s;
+    padding: em(5px);
+    color: white;
+}
+.result-preview:hover{
+    transform: scale(1.01);
 }

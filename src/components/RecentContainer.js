@@ -5,9 +5,9 @@ function RecentContainer({recentSearchTerms}) {
 		return <li key={idx}>{term}</li>;
 	});
 	return (
-		<div>
+		<div className="recent-container">
 			<h1>Recent Searches:</h1>
-			<ul>{searchList.length?searchList:"none"}</ul>
+			<ul className="clean-list">{searchList.length?searchList:"none"}</ul>
 		</div>
 	);
 }
