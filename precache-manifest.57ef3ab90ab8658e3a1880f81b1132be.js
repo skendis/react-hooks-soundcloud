@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b55d3d9bd55542dc55cedede883f6dc",
+    "revision": "c213c9eb74061401bb801e677cc367f2",
     "url": "/react-hooks-soundcloud/index.html"
   },
   {
-    "revision": "3a653dba62f19e7b6d24",
+    "revision": "b453d0787eb14c6a0824",
     "url": "/react-hooks-soundcloud/static/css/main.966cb1b4.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-hooks-soundcloud/static/js/2.9f981920.chunk.js"
   },
   {
-    "revision": "3a653dba62f19e7b6d24",
-    "url": "/react-hooks-soundcloud/static/js/main.60b3de1f.chunk.js"
+    "revision": "b453d0787eb14c6a0824",
+    "url": "/react-hooks-soundcloud/static/js/main.2d876d4b.chunk.js"
   },
   {
     "revision": "c127737df7a6f6536844",
