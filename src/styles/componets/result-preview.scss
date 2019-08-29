@@ -14,3 +14,11 @@
 .result-preview:hover{
     transform: scale(1.01);
 }
+.results-tiles{
+    margin-bottom: em(50px);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    .result-preview{
+        justify-content: center;
+    }
+}

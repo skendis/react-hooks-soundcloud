@@ -3,7 +3,7 @@ import types from '../types.js';
 const initialState = {
 	recentSearchTerms: [],
 	searchResults: {},
-	isTileView: true,
+	isTileView: false,
 	selectedResult: {}
 };
 

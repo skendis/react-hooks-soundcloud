@@ -18,17 +18,17 @@ function ViewSelector({ dispatch, nextPageUrl }) {
 		<div className="view-selector flex space-between">
 			{nextPageUrl ? (
 				<button onClick={nextPage}>
-					<i class="fas fa-arrow-right" />
+					<i className="fas fa-arrow-right" />
 				</button>
 			) : (
 				''
 			)}
 			<div>
 				<button onClick={setTileView}>
-					<i class="fas fa-th-large" />
+					<i className="fas fa-th-large" />
 				</button>
 				<button onClick={setListView}>
-					<i class="fas fa-list" />
+					<i className="fas fa-list" />
 				</button>
 			</div>
 		</div>
