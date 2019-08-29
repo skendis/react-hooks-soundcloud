@@ -18,6 +18,7 @@
     margin-bottom: em(50px);
     display:grid;
     grid-template-columns: 1fr 1fr;
+    gap:em(10px);
     .result-preview{
         justify-content: center;
     }

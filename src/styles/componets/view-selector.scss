@@ -3,4 +3,11 @@
     bottom: em(10px);
     left:0;
     width: 100%;
+    button{
+        cursor: pointer;
+    }
+}
+
+.selected{
+    color: purple;
 }

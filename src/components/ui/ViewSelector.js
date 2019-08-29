@@ -3,7 +3,7 @@ import { switchView, getNextPage } from '../../store/actions/searchActions.js';
 
 import { connect } from 'react-redux';
 
-function ViewSelector({ dispatch, nextPageUrl }) {
+function ViewSelector({ dispatch, nextPageUrl ,isTileView}) {
 	const setTileView = () => {
 		dispatch(switchView(true));
 	};
@@ -24,15 +24,21 @@ function ViewSelector({ dispatch, nextPageUrl }) {
 				''
 			)}
 			<div>
-				<button onClick={setTileView}>
+				<button onClick={setTileView} className={isTileView?'selected':''}>
 					<i className="fas fa-th-large" />
 				</button>
-				<button onClick={setListView}>
+				<button onClick={setListView} className={!isTileView?'selected':''}>
 					<i className="fas fa-list" />
 				</button>
 			</div>
 		</div>
 	);
 }
+const mapStateToProps = ({ searchReducer }) => {
+	const { isTileView } = searchReducer;
 
-export default connect()(ViewSelector);
+	return {
+		isTileView
+	};
+};
+export default connect(mapStateToProps)(ViewSelector);

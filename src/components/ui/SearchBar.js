@@ -4,7 +4,8 @@ import { fetchSearchResults } from '../../store/actions/searchActions.js';
 
 function SearchBar({ dispatch }) {
 	const [ searchText, setSearchText ] = useState('');
-	const handleSubmit = () => {
+	const handleSubmit = (event) => {
+		event.preventDefault();
 		if (searchText) dispatch(fetchSearchResults(searchText));
 	};
 	const handleChange = (event) => {
@@ -12,8 +13,11 @@ function SearchBar({ dispatch }) {
 	};
 	return (
 		<div className="search-bar">
-			<input type="text" className="search-input" placeholder="search" value={searchText} onChange={handleChange} />
-			<button className="primary-btn" onClick={handleSubmit}>GO</button>
+			<form onSubmit={handleSubmit}>
+				<input type="text" className="search-input" placeholder="search" value={searchText} onChange={handleChange} />
+				<button className="primary-btn" onClick={handleSubmit}>GO</button>
+			</form>
+
 		</div>
 	);
 }

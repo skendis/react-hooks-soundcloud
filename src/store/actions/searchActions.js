@@ -7,7 +7,6 @@ export const setSearchResults = (data) => {
 		data
 	};
 };
-export const saveRecentSearchsToStorage = () => {};
 export const getNextPage = (nextPageUrl) => {
 	return (dispatch) => {
 		return soundcloudService
@@ -26,7 +25,6 @@ export const addToRecentSearch = (term) => {
 		term
 	};
 };
-
 export const setSelected = (data) => {
 	return {
 		type: types.SET_SELECTED_RESULT,
@@ -52,3 +50,4 @@ export const fetchSearchResults = (term, nextPageUrl = null) => {
 			});
 	};
 };
+
