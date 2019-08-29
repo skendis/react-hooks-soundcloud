@@ -1,5 +1,6 @@
 import types from '../types.js';
 import soundcloudService from '../../services/soundcloudService.js';
+import storageService from '../../services/storageService.js'
 export const setSearchResults = (data) => {
 	return {
 		type: types.FETCH_SONGS,
@@ -31,6 +32,7 @@ export const setSelected = (data) => {
 	};
 };
 export const switchView = (value) => {
+	storageService.store(value,'viewPref')
 	return {
 		type: types.SWITCH_TILE_VIEW,
 		value

@@ -4,16 +4,21 @@ import RecentContainer from './components/RecentContainer.js';
 import SearchContainer from './components/SearchContainer.js';
 import { connect } from 'react-redux';
 import storageService from './services/storageService.js';
-import { setRecentSearchTerms } from './store/actions/searchActions.js';
+import { setRecentSearchTerms, switchView } from './store/actions/searchActions.js';
 import './styles/style.scss';
 function App({ dispatch }) {
-	useEffect(() => {
-		console.log('loaded');
-		const searchTerms = storageService.load('recentSearchTerms');
-		if (searchTerms) dispatch(setRecentSearchTerms(searchTerms));
-		else dispatch(setRecentSearchTerms([]));
-  }, []);
-  
+	useEffect(
+		() => {
+			const searchTerms = storageService.load('recentSearchTerms');
+			const viewPref = storageService.load('viewPref');
+			dispatch(switchView(viewPref));
+
+			if (searchTerms) dispatch(setRecentSearchTerms(searchTerms));
+			else dispatch(setRecentSearchTerms([]));
+		},
+		[ dispatch ]
+	);
+
 	return (
 		<div className="App">
 			<SearchContainer />
@@ -23,12 +28,4 @@ function App({ dispatch }) {
 	);
 }
 
-const mapStateToProps = ({ searchReducer }) => {
-	const { recentSearchTerms } = searchReducer;
-
-	return {
-		recentSearchTerms
-	};
-};
-
-export default connect(mapStateToProps)(App);
+export default connect()(App);
