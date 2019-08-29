@@ -9,7 +9,7 @@
 @import './componets/result-preview.scss';
 @import './componets/image-container.scss';
 @import './componets/recent-container.scss';
-
+@import './componets/view-selector.scss';
 .App{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -21,11 +21,12 @@
     background-color: $clr1;
     min-height: em(600px);
     padding: em(10px);
+    position: relative;
     border:1px solid black;
     border-radius: em(5px);
 }
 
-ul,li,ol{
+ul,li,ol,h1{
     padding: 0;
     margin: 0;
 }

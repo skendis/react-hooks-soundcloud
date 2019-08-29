@@ -5,4 +5,11 @@
     ul{
         color: white;
     }
+    .recent-search-item{
+        cursor: pointer;
+        margin: em(10px);
+    }
+    .recent-search-item:hover{
+        text-decoration-line: underline;
+    }
 }

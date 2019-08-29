@@ -3,15 +3,14 @@ export default {
 	load
 };
 
-const KEY = 'SOUNDCLOUD_APP_DATA'
 
 //store to localStorage by key
-function store(data) {
-	localStorage[KEY] = JSON.stringify(data);
+function store(data,key) {
+	localStorage[key] = JSON.stringify(data);
 }
 
 //load from localStorage by key
-function load() {
-	var str = localStorage[KEY] || 'null';
+function load(key) {
+	var str = localStorage[key] || 'null';
 	return JSON.parse(str);
 }

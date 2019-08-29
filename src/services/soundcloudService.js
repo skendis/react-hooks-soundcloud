@@ -3,11 +3,18 @@ const CLIENT_ID = 'ggX0UomnLs0VmW7qZnCzw';
 const ENDPOINT = 'https://api.soundcloud.com';
 const LIMIT = 6;
 export default {
-	getSearchResults
+	getSearchResults,
+	getNextPage
 };
 
 async function getSearchResults(term) {
-	const res = await _getRequest(`${ENDPOINT}/tracks?client_id=${CLIENT_ID}&q=${term}&limit=${LIMIT}&linked_partitioning=1`);
+	const res = await _getRequest(
+		`${ENDPOINT}/tracks?client_id=${CLIENT_ID}&q=${term}&limit=${LIMIT}&linked_partitioning=1`
+	);
+	return res;
+}
+async function getNextPage(nextPageUrl) {
+	const res = await _getRequest(nextPageUrl);
 	return res;
 }
 

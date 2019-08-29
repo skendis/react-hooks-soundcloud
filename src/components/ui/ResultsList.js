@@ -5,6 +5,6 @@ function ResultsList({ results}) {
 	const list = results.map((result,idx) => {
 		return <ResultPreview result={result} key={idx} />;
 	});
-	return <ul>{list.length ? list : ''}</ul>;
+	return <ul className="results-list">{list.length ? list : ''}</ul>;
 }
 export default ResultsList;

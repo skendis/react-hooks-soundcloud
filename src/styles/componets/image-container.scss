@@ -9,4 +9,11 @@
 .art-work{
     position: relative;
     width: 100%;
+    img{
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+    img:hover{
+        transform: scale(1.02);
+    }
 }
