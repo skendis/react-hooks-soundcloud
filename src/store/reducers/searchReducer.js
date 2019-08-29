@@ -17,9 +17,9 @@ const searchReducer = (state = initialState, action) => {
 			return { ...state, selectedResult: action.data };
 		case types.ADD_RECENT_SEARCH:
 			return {
-				...state,
-				recentSearchTerms: [ ...state.recentSearchTerms, action.term ]
-			};
+				...state,recentSearchTerms: [ ...state.recentSearchTerms, action.term ]};
+		case types.SET_RECENT_SEARCH_TERMS:
+			return { ...state, recentSearchTerms: action.value };
 		default:
 			return state;
 	}

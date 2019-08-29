@@ -11,6 +11,6 @@ function store(data,key) {
 
 //load from localStorage by key
 function load(key) {
-	var str = localStorage[key] || 'null';
+	const str = localStorage[key] || 'null';
 	return JSON.parse(str);
 }

@@ -1,6 +1,5 @@
 import types from '../types.js';
 import soundcloudService from '../../services/soundcloudService.js';
-import storageService from '../../services/storageService.js';
 export const setSearchResults = (data) => {
 	return {
 		type: types.FETCH_SONGS,
@@ -37,6 +36,12 @@ export const switchView = (value) => {
 		value
 	};
 };
+export const setRecentSearchTerms = (value) => {
+	return {
+		type: types.SET_RECENT_SEARCH_TERMS,
+		value
+	};
+};
 export const fetchSearchResults = (term, nextPageUrl = null) => {
 	return (dispatch) => {
 		return soundcloudService
@@ -50,4 +55,3 @@ export const fetchSearchResults = (term, nextPageUrl = null) => {
 			});
 	};
 };
-
